@@ -2,4 +2,10 @@ marigold
 ========
 
 ## つかいかた
-marigoldLoader.tjsをinitialize.tjsか何かに読み込ませると自動で便利スクリプト群が読み込まれ、global.marigold以下に入る。
+system/Initialize.tjsか何かでStorages.addAutoPathで読みこませるか、
+var subfoldersをしている部分にmarigoldを追加する。
+その後、AfterInit.tjsか何かで
+Scripts.evalStorage("marigoldLoader.tjs");
+をすれば、
+global.marigold
+以下に便利スクリプト群がロードされます。
